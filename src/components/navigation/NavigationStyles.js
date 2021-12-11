@@ -31,11 +31,15 @@ export const NavigationStyles = makeStyles((theme) => ({
         },
     },
     active: {
-        // margin: 'auto 4px',
         fontSize: '18px',
         padding: '4px 6px',
         borderRadius: '4px',
         backgroundColor: '#F9FAFB',
         color: '#FFA500',
     },
+    title: {
+        [theme.breakpoints.down('sm')]: {
+            display: 'none'
+        }
+    }
 }))

@@ -5,13 +5,17 @@ import Cards from 'react-credit-cards';
 import 'react-credit-cards/es/styles-compiled.css';
 import InputCardBank from './InputCardBank';
 import CreditScoreIcon from '@mui/icons-material/CreditScore';
+import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom'
+import { UseCartActions } from '../../Providers/CartProvider';
 
 function CheckoutPage() {
+
+    const navigate = useNavigate()
 
     const [bankData, setBankData] = useState({
         cvc: '',
         expiry: '',
-        focus: '',
         name: '',
         number: '',
     })
@@ -31,6 +35,8 @@ function CheckoutPage() {
 
     const submitHandler = (e) => {
         e.preventDefault()
+        toast.success("Ok")
+        navigate("/")
     }
 
     return (
@@ -57,7 +63,13 @@ function CheckoutPage() {
                             className={classes.textField}
                         />
                     ))}
-                    <Button endIcon={<CreditScoreIcon />} variant="contained" color="secondary" fullWidth type="submit">Shop</Button>
+                    <Button
+                        endIcon={<CreditScoreIcon />}
+                        variant="contained"
+                        color="secondary"
+                        fullWidth
+                        type="submit"
+                    >Paymant</Button>
                 </FormControl>
             </form>
         </Container>

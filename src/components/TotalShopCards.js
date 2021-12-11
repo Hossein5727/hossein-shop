@@ -36,7 +36,7 @@ function TotalShopCards({ classes, totalPrice, totalOffPrice }) {
             </Card>
             <Card className={classes.totalCard}>
                 <CardContent>
-                    <Link to="/checkout">
+                    <Link to="/signup?redirect=/checkout">
                         <Button variant="contained" color="warning" fullWidth>checkout</Button>
                     </Link>
                 </CardContent>

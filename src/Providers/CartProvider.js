@@ -82,5 +82,6 @@ export const UseCartActions = () => {
         setCard(filterCard)
     }
 
+
     return { addProduct, incrementQty, decrementQty, deleteCard }
 }
